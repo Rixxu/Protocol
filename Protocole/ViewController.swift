@@ -9,17 +9,26 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var tieFighter = TIEFighter()
+    var milleniumFlacon = MilleniumFalcon()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        tieFighter.lounch()
+        milleniumFlacon.land()
+        milleniumFlacon.fireLaser()
+        
+        var spaceshipArray: Array<Spaceship> = [tieFighter, milleniumFlacon]
+       
+        for spaceship in spaceshipArray{
+            
+            print("\(spaceship.description)")
+            print("\(spaceship)")
+        }
+
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+  
 }
 
